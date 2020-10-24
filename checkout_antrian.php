@@ -157,14 +157,14 @@ if(isset($_POST['submit'])){
           <div  class="col-lg-8 box featured" data-aos="fade-up">
             
             <h3>No Antrian</h3>
-            <h2><? echo $no_antri ?><span></span></h2>
+            <h2><?php echo $no_antri ?><span></span></h2>
             <ul>
-              <li><i class="bx bx-check"></i> No Rekam Medis  &nbsp;<? echo $no_rm ?></li>
-              <li><i class="bx bx-check"></i> Nama Dokter &nbsp;<?echo $dokterNama ?></li>
-              <li><i class="bx bx-check"></i> Terdaftar Pada &nbsp;<?echo $qq?></li>
-                <li><i class="bx bx-check"></i> Pendaftaran &nbsp;<?echo $baru = date('Y-m-d H:i:s') ?></li>
+              <li><i class="bx bx-check"></i> No Rekam Medis  &nbsp;<?php echo $no_rm ?></li>
+              <li><i class="bx bx-check"></i> Nama Dokter &nbsp;<?php echo $dokterNama ?></li>
+              <li><i class="bx bx-check"></i> Terdaftar Pada &nbsp;<?php echo $qq?></li>
+                <li><i class="bx bx-check"></i> Pendaftaran &nbsp;<?php echo $baru = date('Y-m-d H:i:s') ?></li>
             </ul>
-            <a href="print.php?rm=<?echo $no_rm?>&no_antri=<? echo $no_antri ?>&doc=<? echo $dokterNama ?>&tgt=<? echo $qq ?>&skr=<?echo $baru?>" target="_blank" rel="noopener" class="get-started-btn">Save PDF</a>
+            <a href="print.php?rm=<?php echo $no_rm?>&no_antri=<?php echo $no_antri ?>&doc=<?php echo $dokterNama ?>&tgt=<?php echo $qq ?>&skr=<?php echo $baru?>" target="_blank" rel="noopener" class="get-started-btn">Save PDF</a>
             
           </div>
           

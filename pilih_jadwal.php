@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php
+<?php 
     if ($_GET['no_rm'] == null){
         echo "<script>alert('Silahkan Masukkan Kembali Nomor Rekam Medis Anda!!')</script>";
         header("Location: reg_pasienlama.php");
@@ -103,16 +103,16 @@
 
         <div class="accordion-list">
 
-            <form action="checkout_antrian.php?no_rm=<? echo $no_rm ?>" method="post">
+            <form action="checkout_antrian.php?no_rm=<?php echo $no_rm ?>" method="post">
                 <div class="form-group">
                     <label for="rm">No Rekam Medis</label>
-                    <input disabled class="form-control" value='<? echo $no_rm ?>' name="no_rm">
+                    <input disabled class="form-control" value='<?php echo $no_rm ?>' name="no_rm">
                 </div>
                 <div class="form-group">
                     <label for="poli">Poli</label>
                     <select class="form-control" name="poli" id="poliklinik" required>
                         <option selected disabled value="">Pilih Poliklinik</option>
-                        <?php
+                        <?php 
                         include "connect.php";
                         $qPoli = "SELECT id_poli, nama_poli FROM poli";
                         $r = $conn->query($qPoli);

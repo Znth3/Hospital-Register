@@ -104,10 +104,10 @@
               ?>
 
               <li data-aos="fade-up">
-                  <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" class="collapse" href="#accordion-list-1"><? echo $data->nama_dokter ?><i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" class="collapse" href="#accordion-list-1"><?php echo $data->nama_dokter ?><i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                   <div id="accordion-list-1" class="collapse show" data-parent=".accordion-list">
                       <p>
-                          <? echo $data->nama_poli ?>
+                          <?php echo $data->nama_poli ?>
                       </p>
                       <p>
                           Jadwal Praktek
