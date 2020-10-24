@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4e7f0b92-5495-462c-b1a4-762e73a442e0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkout_antrian.php" beforeDir="false" afterPath="$PROJECT_DIR$/checkout_antrian.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pilih_jadwal.php" beforeDir="false" afterPath="$PROJECT_DIR$/pilih_jadwal.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/print.php" beforeDir="false" afterPath="$PROJECT_DIR$/print.php" afterDir="false" />
+    <list default="true" id="4e7f0b92-5495-462c-b1a4-762e73a442e0" name="Default Changelist" comment="fix old versioned php systax">
+      <change beforePath="$PROJECT_DIR$/reg_pasienlama.php" beforeDir="false" afterPath="$PROJECT_DIR$/reg_pasienlama.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,12 +56,35 @@
       <workItem from="1603226576436" duration="31327000" />
       <workItem from="1603388086544" duration="4064000" />
       <workItem from="1603404309814" duration="19558000" />
-      <workItem from="1603525504171" duration="611000" />
+      <workItem from="1603525504171" duration="926000" />
     </task>
+    <task id="LOCAL-00001" summary="fix old versioned php systax">
+      <created>1603526288937</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1603526288937</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fix old versioned php systax" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix old versioned php systax" />
   </component>
   <component name="WindowStateProjectService">
     <state x="363" y="119" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1602885447629">

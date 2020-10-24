@@ -56,7 +56,7 @@
               <div class="accordion-list">
                   <form action="" method="post">
                       <div class="form-group">
-                          <input class="form-control" type="number" placeholder="Masukkan Nomor Rekam Medis" name="no_rm" required>
+                          <input class="form-control" type="text" placeholder="Masukkan Nomor Rekam Medis" name="no_rm" required>
                       </div>
                       <button type="submit" name="submit" value="submit" class="btn btn-block btn-primary btn-sm">Submit</button>
                   </form>
