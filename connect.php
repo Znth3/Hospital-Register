@@ -4,7 +4,7 @@ $port = "3307";
 $db = "mpsi";
 $user = "root";
 $pass = "root";
-//$dir = "http://localhost/appland/";
+$dirIcon = "";
 
 $conn = new mysqli($host, $user, $pass, $db, $port);
 
