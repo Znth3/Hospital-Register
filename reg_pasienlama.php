@@ -70,12 +70,12 @@
 
       if(isset($_POST['submit']) && isset($_POST['no_rm'])){
           $norm = $_POST['no_rm'];
-          $q = "SELECT * FROM pasien WHERE no_rm = ".$norm;
+          echo $q = "SELECT * FROM pasien WHERE no_rm = '$norm'";
           $hasil = $conn->query($q);
           if($hasil->num_rows > 0){
               header("location: pilih_jadwal.php?no_rm=$norm");
           }else{
-            echo "Gagal Query";
+            echo "Pasien Tidak Ada";
           }
       }else{
           echo "Gagal Submit";

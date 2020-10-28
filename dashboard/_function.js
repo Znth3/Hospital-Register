@@ -1,9 +1,13 @@
 function completeReg(id){
-    window.location.href = "admin/daftar/update.php?no_antrian="+id;
+    window.location.href = "daftar/update.php?no_antrian="+id;
 }
 
 function deleteReg(id){
-    window.location.href = "admin/daftar/delete.php?no_antrian="+id;
+    window.location.href = "daftar/delete.php?no_antrian="+id;
+}
+
+function deleteRegUser(id){
+    window.location.href = "daftar/delete.php?no_antrian="+id;
 }
 
 function printReg(id){

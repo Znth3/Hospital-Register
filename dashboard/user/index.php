@@ -44,7 +44,7 @@ if (isset($_SESSION['no_rm']) && $_SESSION['no_rm'] != 'adminRS') {
                 <svg class="c-sidebar-nav-icon">
                     <use xlink:href="../../icons/sprites/free.svg#cil-address-book"></use>
                 </svg>
-                Daftar Pendaftar</a></li>
+                Daftar Antrian</a></li>
     </ul>
 </div>
 <div class="c-wrapper c-fixed-components">
@@ -166,8 +166,8 @@ if (isset($_SESSION['no_rm']) && $_SESSION['no_rm'] != 'adminRS') {
                                                     <td class="text-center"><?php echo $row->hari ?></td>
                                                     <td class="text-center"><?php echo $row->waktu ?></td>
                                                     <td>
-                                                        <button class="btn btn-sm btn-danger" onclick="deleteReg('<?php echo $row->no_antrian ?>//')"><i class="cil-trash"></i></button>
-                                                        <button class="btn btn-sm btn-primary" onclick="printReg('<?php echo $row->no_antrian ?>//')"><i class="cil-file"></i></button>
+                                                        <button class="btn btn-sm btn-danger" onclick="deleteRegUser('<?php echo $row->no_antrian ?>')"><i class="cil-trash"></i></button>
+                                                        <button class="btn btn-sm btn-primary" onclick="printReg('<?php echo $row->no_antrian ?>')"><i class="cil-file"></i></button>
                                                     </td>
                                                 </tr>
                                             <?php
