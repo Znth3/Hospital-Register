@@ -10,4 +10,6 @@ if(isset($_SESSION['no_rm'])){
     }else{
         header('location: user');
     }
+}else{
+    header('location: ../login');
 }
