@@ -135,6 +135,7 @@ if (isset($_SESSION['no_rm']) && $_SESSION['no_rm'] != 'adminRS') {
                                         <tr>
                                             <th class="text-center">No Antrian</th>
                                             <th class="text-center">Tanggal Antrian</th>
+                                            <th class="text-center">Status Antrian</th>
                                             <th class="text-center">Hari Pendaftaran</th>
                                             <th class="text-center">Tanggal Pendaftaran</th>
                                             <th>Activity</th>
@@ -152,6 +153,16 @@ if (isset($_SESSION['no_rm']) && $_SESSION['no_rm'] != 'adminRS') {
                                                 <tr>
                                                     <td class="text-center"><?php echo $row->no_antrian ?></td>
                                                     <td class="text-center"><?php echo $row->tglDatangDaftar ?></td>
+                                                    <td class="text-center">
+                                                        <?php
+                                                            if ($row->status == 0): ?>
+                                                                <button type="button" class="btn btn-sm btn-outline-success">Mengantri</button>
+                                                        <?php
+                                                            else:?>
+                                                                <button type="button" class="btn btn-sm btn-success">Selesai</button>
+                                                        <?php
+                                                            endif;?>
+                                                    </td>
                                                     <td class="text-center"><?php echo $row->hari ?></td>
                                                     <td class="text-center"><?php echo $row->waktu ?></td>
                                                     <td>
