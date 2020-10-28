@@ -4,7 +4,7 @@ if (isset($_POST['masuk'])):
     $username = $_POST['username'];
     $pass = md5($_POST['password']);
 
-    $sql = "SELECT no_rm FROM pasien WHERE username = '$username' AND password = '$pass'";
+    $sql = "SELECT no_rm, nama FROM pasien WHERE username = '$username' AND password = '$pass'";
 
     $result = $conn->query($sql);
 
@@ -13,12 +13,12 @@ if (isset($_POST['masuk'])):
 
         while ($row = $result->fetch_object()):
             $_SESSION['no_rm'] = $row->no_rm;
+            $_SESSION['nama'] = $row->nama;
             header("location: ../dashboard");
         endwhile;
 
     else:
         session_abort();
-
     endif;
 
 endif;
