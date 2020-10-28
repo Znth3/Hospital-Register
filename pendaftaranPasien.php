@@ -2,6 +2,8 @@
 include "connect.php";
 if (isset($_POST['submit'])){
     $nama = $_POST['nama'];
+    $user = $_POST['username'];
+    $password = md5($_POST['password']);
     $tgl = $_POST['tanggal'];
     $agm = $_POST['agama'];
     $jk = $_POST['jk'];
@@ -29,7 +31,7 @@ if (isset($_POST['submit'])){
     $no_rm = $date."-".$prov."-".$kot."-".$hitung;
 
 //    var_dump($nama, $tgl, $agm, $jk,$kota, $kwn, $pend, $pkj, $stat, $tr, $prov, $kot, $no_rm, $goldar, $tahunLahir);
-    $insert = "INSERT INTO pasien (no_rm, nama, tgl_lahir, agama, gol_darah, status_kawin, pend_terakhir, jk, kewarganegaraan, cara_pembayaran, idWilayah) VALUES ('$no_rm', '$nama', '$tgl', '$agm', '$goldar', '$stat', '$pend', '$jk', '$kwn', '$tr', '$kota')";
+    $insert = "INSERT INTO pasien (no_rm, nama, tgl_lahir, agama, gol_darah, status_kawin, pend_terakhir, jk, kewarganegaraan, cara_pembayaran, idWilayah, username, password) VALUES ('$no_rm', '$nama', '$tgl', '$agm', '$goldar', '$stat', '$pend', '$jk', '$kwn', '$tr', '$kota', '$user', '$password')";
 
     $exec = $conn->query($insert);
     if ($conn->affected_rows > 0){

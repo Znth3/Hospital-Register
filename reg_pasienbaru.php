@@ -99,6 +99,16 @@
         <div class="accordion-list">
             <form action="pendaftaranPasien.php" method="post">
                 <div class="form-group">
+                    <label for="namepasien">Username</label>
+                    <input type="text" class="form-control" required placeholder="Masukkan Username" name="username">
+                </div>
+
+                <div class="form-group">
+                    <label for="namepasien">Password</label>
+                    <input type="password" class="form-control" required placeholder="Masukkan Password" name="password">
+                </div>
+
+                <div class="form-group">
                     <label for="namepasien">Nama Pasien</label>
                     <input type="text" class="form-control" required placeholder="Masukkan Nama" name="nama">
                 </div>
