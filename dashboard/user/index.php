@@ -135,7 +135,7 @@ if (isset($_SESSION['no_rm']) && $_SESSION['no_rm'] != 'adminRS') {
                                         <tr>
                                             <th class="text-center">No Antrian</th>
                                             <th class="text-center">Tanggal Antrian</th>
-                                            <th class="text-center">Hari Berkunjung</th>
+                                            <th class="text-center">Hari Pendaftaran</th>
                                             <th class="text-center">Tanggal Pendaftaran</th>
                                             <th>Activity</th>
                                         </tr>
