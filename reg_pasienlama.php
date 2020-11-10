@@ -78,7 +78,7 @@
             echo "Pasien Tidak Ada";
           }
       }else{
-          echo "Gagal Submit";
+//          header('location: reg_pasienlama.php');
       }
       ?>
 

@@ -10,7 +10,6 @@ if (isset($_POST['masuk'])):
 
     if ($result->num_rows > 0):
         session_start();
-
         while ($row = $result->fetch_object()):
             $_SESSION['no_rm'] = $row->no_rm;
             $_SESSION['nama'] = $row->nama;

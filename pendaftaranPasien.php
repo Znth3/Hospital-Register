@@ -16,18 +16,20 @@ if (isset($_POST['submit'])){
     $goldar = $_POST['gol_darah'];
 
     $date = substr($tgl, 2, -6);
-    $tahunLahir = substr($tgl, 0, -6);
+    echo $tahunLahir = substr($tgl, 0, -6);
     $prov = substr($kota, 0, -2);
     $kot = substr($kota, 2);
     $hitung = 0;
-    $query = "SELECT COUNT(pasien.no_rm) AS hitung FROM pasien WHERE idWilayah = ".$kota."AND year(tgl_lahir) = ".$tahunLahir;
+    $query = "SELECT COUNT(pasien.no_rm) AS hitung FROM pasien WHERE idWilayah = ".$kota." AND year(tgl_lahir) = ".$tahunLahir;
     $result = $conn->query($query);
-    if($result->num_rows > 0){
+    if($result){
         while($data = $result->fetch_object()){
             $hitung = $data->hitung;
         }
+    }else{
+        $conn->connect_error;
     }
-    $hitung++;
+    echo $hitung++;
     $no_rm = $date."-".$prov."-".$kot."-".$hitung;
 
 //    var_dump($nama, $tgl, $agm, $jk,$kota, $kwn, $pend, $pkj, $stat, $tr, $prov, $kot, $no_rm, $goldar, $tahunLahir);

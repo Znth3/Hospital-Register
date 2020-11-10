@@ -225,8 +225,10 @@
                     <label for="cara_pembayaran">Cara Pembayaran</label>
                     <select class="form-control" name="cara_pembayaran" required>
                         <option disabled selected value="">Pilih Pembayaran</option>
-                        <option value="1">BPJS</option>
-                        <option value="0">Non-BPJS</option>
+                        <option value="B1">Jaminan Kesehatan Nasional</option>
+                        <option value="B2">Jaminan Kesehatan Masyarakat</option>
+                        <option value="B3">Jaminan Kesehatan Daerah</option>
+                        <option value="B4">Umum</option>
                     </select>
 
                 </div>
