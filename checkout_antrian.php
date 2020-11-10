@@ -110,17 +110,41 @@ if(isset($_POST['submit'])){
 
     $p = date('dmY', $tanggal);
 //    var_dump($no_rm);
+
+    //pengecekan jenis pembayaran pasien
+    $caraBayar = '';
+    $jenisCari = "SELECT cara_pembayaran FROM pasien WHERE no_rm = '$no_rm'";
+    $rrr = $conn->query($jenisCari);
+    if($rrr->num_rows > 0){
+        while ($data = $rrr->fetch_object()):
+            $caraBayar = $data->cara_pembayaran;
+        endwhile;
+    }else{
+        echo $conn->connect_errno;
+    }
+
+    //pengecekan nomor urut pada tanggal pendaftaran
     $count = 0;
-    $queryCari = "SELECT COUNT(no_antrian) as hitung FROM daftar WHERE tglDatangDaftar = '$qqq'";
+    $queryCari = "
+        SELECT 
+	        COUNT(daftar.no_antrian) as hitung     
+        FROM daftar 
+        JOIN pasien 
+	        ON pasien.no_rm = daftar.no_rm 
+        WHERE daftar.tglDatangDaftar = '$qqq' 
+            AND pasien.cara_pembayaran = '$caraBayar'";
     $r = $conn->query($queryCari);
     if($r->num_rows > 0){
         while ($data = $r->fetch_object()){
-            $count = $data->hitung + 1;
+            $count = $data->hitung;
         }
     }else{
 
     }
-    $no_antri = 'D-'.$z.$count."-".$now;
+    $count++;
+
+
+    $no_antri = $caraBayar.'-'.$z.$count."-".$now;
 
     $q = "INSERT INTO `mpsi`.`daftar` (no_antrian, no_rm, `id_dokter`, `hari`, `id_jadwal`, tglDatangDaftar) VALUES ('$no_antri','$no_rm', '$id_dokter', '$today', '$id_jadwal', '$qqq')";
     $r = $conn->query($q);
