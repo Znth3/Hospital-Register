@@ -18,10 +18,11 @@ if (isset($_POST['masuk'])):
 
     else:
         session_abort();
+        header("location: index.php");
         echo "
         <script>window.alert('Username/Password salah')</script>
         ";
-        header("location: index.php");
+
     endif;
 
 endif;
