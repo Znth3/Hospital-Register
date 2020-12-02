@@ -21,6 +21,7 @@ if (isset($_POST['masuk'])):
         echo "
         <script>window.alert('Username/Password salah')</script>
         ";
+        header("location: index.php");
     endif;
 
 endif;
