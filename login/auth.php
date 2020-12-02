@@ -18,7 +18,12 @@ if (isset($_POST['masuk'])):
 
     else:
         session_abort();
+        echo "
+        <script>window.alert('Username/Password salah')</script>
+        ";
     endif;
 
 endif;
+
+
 
